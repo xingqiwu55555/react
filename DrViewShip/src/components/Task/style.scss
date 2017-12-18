@@ -1,0 +1,118 @@
+@import '../../assets/styles/baseFunction';
+
+:global {
+  .task{
+    margin-bottom: pxRem(20);
+    border-radius: pxRem(8);
+    background: #fff;
+    height: pxRem(148);
+    box-sizing: border-box;
+		display: -webkit-box;
+    -webkit-box-align: center;
+    .task-lf{	
+      margin: 0 pxRem(20);
+      display: -webkit-box;
+      -webkit-box-align: center;
+      -webkit-box-pack: center;
+      color: #ae5400;
+      font-size: $font24;
+      text-align: center;
+      box-sizing: border-box;
+    }
+    .task-text{
+      padding: pxRem(10) 0 pxRem(20);
+      -webkit-box-flex: 1;
+      p{
+        line-height: pxRem(60);
+        font-size: $font30;
+        span{
+          color: $textColor;
+        }
+      }
+      div{
+        font-size: $font24;
+        color: $textColor;
+      }
+    }
+    &.task-type-one{
+      .task-lf{
+        width: pxRem(110);
+        height: pxRem(102);
+        // background: url(../../assets/images/type-one.png)no-repeat;
+        background-size: 100% 100%;
+      }
+      .task-btn{
+        margin-right: pxRem(10);
+        width: pxRem(207);
+        height: pxRem(94);
+        // background: url(../../assets/images/recieve-gray-btn.png)no-repeat;
+        background-size: 100% 100%;
+        &.task-btn-overtime{
+          width: pxRem(120);
+          height: pxRem(97);
+          // background: url(../../assets/images/uncompleted.png);
+          background-size: 100% 100%;
+        }
+      }
+    }
+    &.task-type-two{
+      .task-lf{
+        width: pxRem(127);
+        height: pxRem(101);
+        // background: url(../../assets/images/type-two.png)no-repeat;
+        background-size: 100% 100%;
+      }
+      .task-btn{
+        margin-right: pxRem(20);
+        width: pxRem(89);
+        height: pxRem(89);
+        &.task-btn-complete{
+          // background: url(../../assets/images/complete.png)no-repeat;
+          background-size: 100% 100%;
+        }
+        &.task-btn-overtime{
+          width: pxRem(120);
+          height: pxRem(97);
+          // background: url(../../assets/images/uncompleted.png);
+          background-size: 100% 100%;
+        }
+      }
+    }
+    &.task-type-three{
+      .task-lf{
+        width: pxRem(110);
+        height: pxRem(102);
+        // background: url(../../assets/images/type-three.png)no-repeat;
+        background-size: 100% 100%;
+        padding-top: pxRem(32);
+        font-size: $font24;
+        color: #fff;
+      }
+      .task-btn{
+        margin-right: pxRem(10);
+        width: pxRem(207);
+        height: pxRem(94);
+        // background: url(../../assets/images/recieve-gray-btn.png);
+        background-size: 100% 100%;
+        &.task-btn-overtime{
+          width: pxRem(120);
+          height: pxRem(97);
+          // background: url(../../assets/images/uncompleted.png);
+          background-size: 100% 100%;
+        }
+      }
+    }
+    &.task-type-one, &.task-type-three{
+      .task-btn{
+        &.task-btn-complete{
+          // background: url(../../assets/images/recieve-btn.png);
+          background-size: 100% 100%;
+        }
+        &.task-btn-reward{
+          // background: url(../../assets/images/recieved-btn.png);
+          background-size: 100% 100%;
+        }
+      }
+    }
+  }
+}

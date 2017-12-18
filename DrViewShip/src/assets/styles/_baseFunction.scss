@@ -1,0 +1,135 @@
+@charset "UTF-8";
+@function pxRem($px, $base-font-size: 75px) {
+  @if (unitless($px)) {
+    @return pxRem($px + 0px);
+  } @else if (unit($px)==rem) {
+    @return $px;
+  }
+  @return ($px / $base-font-size) * 1rem;
+}
+
+%flexDisplay {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -moz-box-orient: horizontal;
+  -moz-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+%flexCenter {
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-box-pack: center;
+  box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+%flexCenterY {
+  -webkit-align-self: center;
+  align-self: center;
+}
+
+%flexBetwen {
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+@mixin flexFlow($number:1) {
+  -webkit-box-flex: $number;
+  -moz-box-flex: $number;
+  -ms-box-flex: $number;
+  box-flex: $number;
+  -webkit-flex: $number;
+  flex: $number;
+}
+
+@mixin transformY($y) {
+  -webkit-transform: translateY($y);
+  -moz-transform: translateY($y);
+  -ms-transform: translateY($y);
+  -o-transform: translateY($y);
+  transform: translateY($y);
+}
+
+@mixin clearFloat {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+@mixin clearfix {
+  &:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+}
+
+@mixin oneLineMix {
+  overflow: hidden;
+  word-break: break-all;
+  word-wrap: normal;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+%aLAVH {
+  a {
+    text-decoration: none;
+  }
+  a:link {
+    text-decoration: none;
+  }
+  a:active {
+    text-decoration: none;
+  }
+  a:visited {
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+%letterSpacing {
+  .one {
+    letter-spacing: pxRem(27*2);
+  }
+  .two {
+    letter-spacing: pxRem(7*2);
+  }
+}
+
+@mixin font-dpr($font-size) {
+  font-size: $font-size * 1px;
+  [data-dpr="2"] & {
+    font-size: $font-size * 2px;
+  }
+  [data-dpr="3"] & {
+    font-size: $font-size * 3px;
+  }
+}
+
+$font24: pxRem(24);
+$font26: pxRem(26);
+$font28: pxRem(28);
+$font30: pxRem(30);
+$font32: pxRem(32);
+$font34: pxRem(34);
+$font36: pxRem(36);
+$font40: pxRem(40);
+$font60: pxRem(60);
+$bodyBg: #7dd8fa;
+$taskBg: #1699f4;
+$wrapBg:  rgba(0, 0, 0, 0.4); //rgba(16, 129, 241, 0.4)
+$textColor: #fc5b2a;

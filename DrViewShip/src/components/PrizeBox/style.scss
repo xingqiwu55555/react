@@ -1,0 +1,62 @@
+@import '../../assets/styles/baseFunction.scss';
+
+:global {
+  .prize{
+    width: pxRem(680);
+    margin: pxRem(60) auto pxRem(60);
+    background: $taskBg;
+    border-radius: pxRem(8);
+    position: relative;
+    z-index: 2;
+    box-sizing: border-box;
+    padding: pxRem(30) pxRem(16);
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    display: -webkit-box;
+    .prize-item{
+      width: pxRem(205);
+      height: pxRem(280);
+      // background: url(../../assets/images/prize-bg.png)no-repeat;
+      background-size: 100% 100%;
+      box-sizing: border-box;
+      padding-top: pxRem(90);
+      color: #fff;
+      text-align: center;
+      &.prize-item-margin{
+        margin-left: pxRem(18);
+        margin-right: pxRem(18);
+      }
+    }
+    .prize-name{
+      font-size: $font32;
+      height: pxRem(32);
+    }
+    .prize-dec{
+      margin-top: pxRem(14);
+      font-size: $font24;
+    }
+    .prize-btn{
+      height: pxRem(58);
+      width: pxRem(180);
+      margin: pxRem(16) auto 0;
+      line-height: pxRem(58);   
+      border-radius: pxRem(29);
+      font-size: $font28;
+      background: #d2cdca;
+      color: #fff;
+      &.prize-btn-active{
+        background: #ffe400;
+        color: #fd6a24;
+      }
+    }
+    .prize-item-active{
+      .prize-name{
+        font-size: $font24;
+      }
+      .prize-btn{
+        background: #d2cdca;
+        color: #fff;
+      }
+    }
+  }
+}

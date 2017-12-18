@@ -1,0 +1,45 @@
+@import 'baseFunction';
+
+:global {
+  html{
+    min-height: 100%;
+    height: auto;
+    background: $bodyBg;
+  }
+  body{
+    height: 100%;
+    background: $bodyBg;
+    padding-bottom: pxRem(80);
+    box-sizing: border-box;
+  }
+  .display-none {
+    display: none;
+  }
+  .banner{
+    position: relative;
+    .main_img{
+      width: 100%;
+    }
+    .rule_img{
+      position: absolute;
+      top: 0;
+      right: pxRem(10);
+      width: pxRem(74);
+      z-index: 10;
+    }
+    .process-text{
+      position: absolute;
+      bottom: pxRem(10);
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      padding: 0 pxRem(14);
+      text-align: center;
+      color: #fff;
+      font-size: $font26;
+      line-height: pxRem(40);
+      height: pxRem(40);
+      background: #0284ed;
+      border-radius: pxRem(20);
+    }
+  }
+}

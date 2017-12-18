@@ -1,0 +1,38 @@
+@import '../../assets/styles/baseFunction';
+
+:global {
+  #pointRuleModal,#BoxRuleModal{
+    .utils-modal-con {
+      position: relative;
+      border-radius: pxRem(16) !important;
+      background: none !important;
+    }
+    .utils-modal-body{
+      text-align: left;
+      background: #fff;
+      border-radius: pxRem(16) !important;
+      padding-bottom: pxRem(40) !important;
+      .title{
+        line-height: pxRem(120);
+        color: #c11d3a;
+        font-size: $font34;
+        text-align: center;
+      }
+      .num-text{
+        font-size: $font30;
+        line-height: pxRem(60);
+      }
+    }
+    .utils-modal-footer{
+      margin-top: pxRem(40);
+      border: none !important;
+      img{
+        width: pxRem(64);
+        height: pxRem(64);
+      }
+    }
+  }
+  #endModal{
+    .confirm{ color: #108ee9; }
+  }
+}
