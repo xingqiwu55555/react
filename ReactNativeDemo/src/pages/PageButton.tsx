@@ -1,4 +1,8 @@
-import { View } from "react-native";
+import { View, Text } from "react-native";
 import * as React from "react";
 
-export const PageButton = () => (<View>button page</View>)
+export const PageButton = () => (
+  <View>
+    <Text>button page</Text>
+  </View>
+);

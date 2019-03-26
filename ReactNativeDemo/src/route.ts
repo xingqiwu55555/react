@@ -6,11 +6,11 @@ import { PageRNActivityIndicator } from "./pages/PageRNActivityIndicator";
 export const baseRouteConfigs = {
   ActivityIndicator: {
     screen: PageRNActivityIndicator,
-    title: "ActivityIndicator"
+    title: "RNActivityIndicator"
   },
   Button: {
     screen: PageButton,
-    title: "Button"
+    title: "RNButton"
   },
   TabNavigation: {
     screen: PageTabNavigation,

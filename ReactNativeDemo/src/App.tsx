@@ -39,7 +39,7 @@ const AppNavigation = createStackNavigator(
     Home: {
       screen: PageHome,
       navigationOptions: {
-        title: "PageHome",
+        title: "Home",
         headerBackTitle: "back",
         headerStyle: styles.headerStyle,
         headerTitleStyle: styles.headerTitleStyle,
@@ -49,7 +49,7 @@ const AppNavigation = createStackNavigator(
     ...unfoldBaseRouteConfigs
   },
   {
-    initialRouteName: "PageHome",
+    initialRouteName: "Home",
     cardStyle: {
       backgroundColor: "#f5fcff"
     }
