@@ -1,0 +1,65 @@
+{
+  "name": "ReactNativeDemo",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "ios": "react-native run-ios --simulator='iPhone 8 Plus'",
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest",
+    "lint": "tslint --project tsconfig.json"
+  },
+  "dependencies": {
+    "lodash": "4.17.11",
+    "react": "16.8.3",
+    "react-native": "0.59.1",
+    "react-native-gesture-handler": "1.1.0",
+    "react-navigation": "3.5.1"
+  },
+  "devDependencies": {
+    "@babel/core": "7.4.0",
+    "@babel/runtime": "7.4.0",
+    "@types/enzyme": "3.9.1",
+    "@types/enzyme-adapter-react-16": "1.0.5",
+    "@types/jest": "24.0.11",
+    "@types/react": "16.8.8",
+    "@types/react-native": "0.57.41",
+    "@types/react-navigation": "3.0.5",
+    "@types/react-test-renderer": "16.8.1",
+    "@types/lodash": "4.14.123",
+    "babel-jest": "24.5.0",
+    "enzyme": "3.9.0",
+    "enzyme-adapter-react-16": "1.11.2",
+    "jest": "24.5.0",
+    "metro-react-native-babel-preset": "0.53.1",
+    "react-dom": "16.8.4",
+    "react-test-renderer": "16.8.3",
+    "ts-jest": "24.0.0",
+    "tslint": "5.14.0",
+    "tslint-config-prettier": "1.18.0",
+    "tslint-eslint-rules": "5.4.0",
+    "tslint-react": "3.6.0",
+    "typescript": "3.3.4000",
+    "prettier": "^1.14.2"
+  },
+  "jest": {
+    "preset": "react-native",
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js",
+      "\\.(ts|tsx)$": "ts-jest"
+    },
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "tsconfig.jest.json"
+      }
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "setupFiles": [
+      "./tests/setup.js"
+    ]
+  }
+}
