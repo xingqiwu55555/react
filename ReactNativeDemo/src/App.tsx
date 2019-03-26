@@ -5,10 +5,11 @@ import { StyleSheet } from "react-native";
 import { baseRouteConfigs } from "./route";
 import _ from "lodash";
 import { Component } from "react";
+import { appColor } from "./style/color";
 
 const styles = StyleSheet.create({
   headerStyle: {
-    backgroundColor: "#155AAF"
+    backgroundColor: appColor.theme
   },
   headerTitleStyle: {
     color: "#fff"
@@ -51,7 +52,7 @@ const AppNavigation = createStackNavigator(
   {
     initialRouteName: "Home",
     cardStyle: {
-      backgroundColor: "#f5fcff"
+      backgroundColor: appColor.body
     }
   }
 );

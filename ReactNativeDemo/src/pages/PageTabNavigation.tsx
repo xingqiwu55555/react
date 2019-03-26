@@ -1,8 +1,21 @@
-import { Text, View } from "react-native";
 import * as React from "react";
+import { PageRNActivityIndicator } from "./PageRNActivityIndicator";
+import { PageButton } from "./PageButton";
+import { createBottomTabNavigator, createAppContainer } from "react-navigation";
+import { appColor } from "../style/color";
+// import Ionicons from "react-native-vector-icons/Ionicons";
 
-export const PageTabNavigation = () => (
-  <View>
-    <Text>tab page</Text>
-  </View>
+const TabNavigator = createBottomTabNavigator(
+  {
+    ActivityIndicator: PageRNActivityIndicator,
+    Button: PageButton
+  },
+  {
+    tabBarOptions: {
+      activeTintColor: appColor.theme,
+      inactiveTintColor: "gray"
+    }
+  }
 );
+
+export const PageTabNavigation = createAppContainer(TabNavigator);
