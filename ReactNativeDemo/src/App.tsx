@@ -1,11 +1,12 @@
 import * as React from "react";
 import { createStackNavigator, createAppContainer } from "react-navigation";
 import { PageHome } from "./pages/PageHome";
-import { StyleSheet } from "react-native";
+import { StyleSheet, View, Text } from "react-native";
 import { baseRouteConfigs } from "./route";
 import _ from "lodash";
 import { Component } from "react";
 import { appColor } from "./style/color";
+import Icon from "react-native-vector-icons/FontAwesome5";
 
 const styles = StyleSheet.create({
   headerStyle: {
@@ -44,7 +45,15 @@ const AppNavigation = createStackNavigator(
         headerBackTitle: "back",
         headerStyle: styles.headerStyle,
         headerTitleStyle: styles.headerTitleStyle,
-        headerTintColor: "white"
+        headerTintColor: "white",
+        headerLeft: (
+          <Icon
+            name="users-cog"
+            size={24}
+            color="#fff"
+            style={{ marginLeft: 20 }}
+          />
+        )
       }
     },
     ...unfoldBaseRouteConfigs
