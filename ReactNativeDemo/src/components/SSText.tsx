@@ -12,7 +12,7 @@ export const SSText: React.SFC<ISSTextProps> = ({ style = {}, children }) => (
 const styles = StyleSheet.create({
   text: {
     fontSize: 14,
-    lineHeight: 40,
+    lineHeight: 22,
     paddingTop: 10,
     paddingBottom: 10,
     paddingLeft: 10,

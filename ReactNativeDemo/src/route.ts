@@ -3,15 +3,20 @@ import { PageTabNavigation } from "./pages/PageTabNavigation";
 import { PageDetail } from "./pages/PageDetail";
 import { PageRNActivityIndicator } from "./pages/PageRNActivityIndicator";
 import { PageDrawerNavigation } from "./pages/PageDrawerNavigation";
+import { PageRNDatePickerIOS } from "./pages/PageRNDatePickerIOS";
 
 export const baseRouteConfigs = {
   ActivityIndicator: {
     screen: PageRNActivityIndicator,
-    title: "RNActivityIndicator"
+    title: "ActivityIndicator"
   },
   Button: {
     screen: PageButton,
-    title: "RNButton"
+    title: "Button"
+  },
+  DatePickerIOS: {
+    screen: PageRNDatePickerIOS,
+    title: "DatePickerIOS"
   },
   TabNavigation: {
     screen: PageTabNavigation,
